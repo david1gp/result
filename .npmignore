@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output
+
+# IDE files
+.vscode/
+.idea/
+.roo/
+
+# Build outputs (if any)
+dist/
+build/
+output/
+
+# Project-specific ignores
+data/
+doc/
+ops/
+public/
+src/
