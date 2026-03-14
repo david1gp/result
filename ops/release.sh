@@ -69,12 +69,6 @@ if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
   exit 1
 fi
 
-# --- Step 5: Build and Deploy ---
-bun run deploy
-
-# update docs
-git add .roo
-git commit -m "doc(ui): update file list in ui lib"
 
 # --- Step 6: Update package.json ---
 echo "🔄 Updating $PACKAGE_JSON to v$NEW_VERSION..."
