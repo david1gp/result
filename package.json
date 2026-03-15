@@ -24,6 +24,7 @@
     "trailingComma": "all"
   },
   "type": "module",
+  "main": "dist/index.js",
   "private": false,
   "license": "MIT",
   "description": "A simple, type-safe Result type for TypeScript. Handle errors gracefully without try-catch soup.",
@@ -43,6 +44,7 @@
     "url": "https://github.com/david1gp/result/issues"
   },
   "exports": {
+    ".": "./dist/index.js",
     "./*": "./dist/*"
   },
   "files": [
