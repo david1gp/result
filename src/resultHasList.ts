@@ -1,4 +1,4 @@
-import type { Result } from "./Result"
+import type { Result } from "./Result.js"
 
 export function resultHasList<T>(r: Result<T[]> | undefined): T[] | null {
   if (!r) return null

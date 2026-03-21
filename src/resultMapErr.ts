@@ -1,5 +1,5 @@
-import type { Result } from "./Result"
-import type { ResultErr } from "./ResultErr"
+import type { Result } from "./Result.js"
+import type { ResultErr } from "./ResultErr.js"
 
 
 export function resultMapErr<T>(r: Result<T>, fn: (err: ResultErr) => ResultErr): Result<T> {

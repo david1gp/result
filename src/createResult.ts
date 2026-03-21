@@ -1,4 +1,4 @@
-import type { ResultOk } from "./ResultOk"
+import type { ResultOk } from "./ResultOk.js"
 
 export function createResult<T>(data: T): ResultOk<T> {
   return {
