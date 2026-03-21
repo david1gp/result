@@ -1,14 +1,34 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
+    //
+    // dom
+    //
+    "lib": [
+      "esnext"
+    ],
+    "types": ["bun"],
+    //
+    // performance
+    //
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./build/tsconfig.tsbuildinfo",
+    //
+    // my configs
+    //
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "downlevelIteration": true,
+    "noUncheckedSideEffectImports": true,
     //
     // type imports - https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax
     //
@@ -27,8 +47,29 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src"
-  ]
+    "client",
+    "src",
+    "test"
+  ],
+  "exclude": [
+    ".github",
+    ".roo",
+    ".idea",
+    ".vscode",
+    ".wrangler",
+    "changelogs",
+    "build",
+    "dist",
+    "out",
+    "data",
+    "docs",
+    "node_modules",
+    "ops",
+    "public",
+    "public-image-versions",
+    "public-images"
+  ],
 }
