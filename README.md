@@ -9,6 +9,7 @@ Handle them gracefully with a simple, type-safe Result type that tells you exact
 - **Explicit errors** - Know exactly which operation failed and why
 - **No try-catch soup** - Clean, readable error handling
 - **Chainable** - Transform results with `resultMap`, `resultMapErr`
+- **Safe fetches** - Wrap `fetch` responses and validate JSON with Valibot schemas
 - **Lightweight** - Zero dependencies, tree-shakable
 
 ## The Problem
@@ -103,6 +104,21 @@ const mapped = resultMap(ok, (user) => user.name.toUpperCase())
 - `resultGetOrElse(r, default)` - Get data or return default
 - `resultMap(r, fn)` - Transform data if success
 - `resultMapErr(r, fn)` - Transform error if failure
+- `fetchResult(op, input, init?, schema?)` - Fetch text or validate JSON into a Result
+
+### Fetch Result
+
+```typescript
+import { fetchResult } from "@adaptive-ds/result"
+import * as a from "valibot"
+
+const userSchema = a.object({ id: a.string(), name: a.string() })
+
+const result = await fetchResult("loadUser", "/api/user", { method: "GET" }, userSchema)
+if (!result.success) return result
+
+console.log(result.data.name)
+```
 
 ## License
 
