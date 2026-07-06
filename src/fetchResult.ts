@@ -1,7 +1,7 @@
 import * as a from "valibot"
-import type { PromiseResult } from "./PromiseResult.js"
 import { createResult } from "./createResult.js"
 import { createResultError } from "./createResultError.js"
+import type { PromiseResult } from "./PromiseResult.js"
 import { resultTryParsingFetchErr } from "./resultTryParsingFetchErr.js"
 
 type FetchInput = Parameters<typeof fetch>[0]

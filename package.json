@@ -9,12 +9,14 @@
     "update": "bun update",
     "update:commit": "bun update && git add package.json && bun run tsc && git commit -m \"chore(deps): update dependencies\" && git push",
     "clean": "rm -rf ./dist",
-    "reset": "rm -rf ./node_modules"
+    "reset": "rm -rf ./node_modules",
+    "format": "biome format --write src package.json tsconfig.json tsconfig.lib.json biome.json"
   },
   "peerDependencies": {
     "valibot": "^1.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.2",
     "@types/bun": "^1.3.13",
     "typescript": "^6.0.3"
   },

@@ -1,2 +1,1 @@
-
-export type ResultOk<T> = { success: true; data: T}
+export type ResultOk<T> = { success: true; data: T }

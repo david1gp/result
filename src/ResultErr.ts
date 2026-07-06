@@ -1,4 +1,3 @@
-
 export type ResultErr = {
   success: false
   op: string

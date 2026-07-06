@@ -6,7 +6,11 @@ export { fetchResult } from "./fetchResult.js"
 export type { PromiseResult } from "./PromiseResult.js"
 export type { Result } from "./Result.js"
 export type { ResultErr } from "./ResultErr.js"
-export { resultErrSchema, resultErrSchemaFromJsonString } from "./resultErrSchema.js"
+export type { ResultOk } from "./ResultOk.js"
+export {
+  resultErrSchema,
+  resultErrSchemaFromJsonString,
+} from "./resultErrSchema.js"
 export { resultGetOrElse } from "./resultGetOrElse.js"
 export { resultHasData } from "./resultHasData.js"
 export { resultHasErrorMessage } from "./resultHasErrorMessage.js"
@@ -15,5 +19,4 @@ export { resultIsErr } from "./resultIsErr.js"
 export { resultIsOk } from "./resultIsOk.js"
 export { resultMap } from "./resultMap.js"
 export { resultMapErr } from "./resultMapErr.js"
-export type { ResultOk } from "./ResultOk.js"
 export { resultTryParsingFetchErr } from "./resultTryParsingFetchErr.js"
